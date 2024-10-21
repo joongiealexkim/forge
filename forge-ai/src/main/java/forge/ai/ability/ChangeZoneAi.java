@@ -1274,6 +1274,12 @@ public class ChangeZoneAi extends SpellAbilityAi {
                 }
             }
 
+            if (!sa.canTarget(choice)) {
+                // Verify that the choice is still legal before we add it
+                list.remove(choice);
+                continue;
+            }
+
             list.remove(choice);
             sa.getTargets().add(choice);
         }

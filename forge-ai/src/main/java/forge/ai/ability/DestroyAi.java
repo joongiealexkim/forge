@@ -275,6 +275,12 @@ public class DestroyAi extends SpellAbilityAi {
                     }
                 }
 
+                if (!sa.canTarget(choice)) {
+                    // Verify we can still target. IF not remove from the list
+                    list.remove(choice);
+                    continue;
+                }
+
                 // Restore original list for next loop if filtered by MustTarget requirement
                 if (mustTargetFiltered) {
                     list = originalList;
