@@ -336,8 +336,8 @@ public class Assets implements Disposable {
         if (textrafonts == null)
             textrafonts = new ObjectMap<>();
         if (!textrafonts.containsKey("textrafont")) {
-            Font font = new Font(bitmapFont, 0f, 2f, 0f, 1f);
-            font.addAtlas(item_atlas, 0f, 6f, 0f);
+            Font font = new Font(bitmapFont, 0f, 4f, 0f, 8f);
+            font.addAtlas(item_atlas, 0f, 10f, 0f);
             //problematic atlas since some buttons are small, and this is too big for some buttons, need a way to enable
             //this via property
             //font.addAtlas(pixelmana_atlas, -90f, 20f, 0f);
@@ -351,8 +351,8 @@ public class Assets implements Disposable {
         if (textrafonts == null)
             textrafonts = new ObjectMap<>();
         if (!textrafonts.containsKey("keysfont")) {
-            Font font = new Font(bitmapFont);
-            font.addAtlas(keys_atlas, 0f, 6f, 0f);
+            Font font = new Font(bitmapFont, 8f, 4f, 0f, 0f);
+            font.addAtlas(keys_atlas, 4f, 4f, -10f);
             font.integerPosition = false;
             textrafonts.put("keysfont", font);
         }
@@ -363,8 +363,8 @@ public class Assets implements Disposable {
         if (textrafonts == null)
             textrafonts = new ObjectMap<>();
         if (!textrafonts.containsKey(name)) {
-            Font font = new Font(bitmapFont, 0f, 2f, 0f, 1f);
-            font.addAtlas(items_atlas, 0f, 6f, 0f);
+            Font font = new Font(bitmapFont, 0f, 4f, 0f, 8f);
+            font.addAtlas(items_atlas, 0f, 10f, 0f);
             font.integerPosition = false;
             textrafonts.put(name, font);
         }
@@ -375,7 +375,7 @@ public class Assets implements Disposable {
         if (textrafonts == null)
             textrafonts = new ObjectMap<>();
         if (!textrafonts.containsKey("GenericHeaderFont")) {
-            Font font = new Font(bitmapFont, 0f, -0.5f, 0f, -2.5f);
+            Font font = new Font(bitmapFont, 0f, -1.5f, 0f, 2.5f);
             font.integerPosition = false;
             textrafonts.put("GenericHeaderFont", font);
         }

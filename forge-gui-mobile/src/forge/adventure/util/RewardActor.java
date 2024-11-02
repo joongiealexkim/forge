@@ -23,6 +23,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.Scaling;
+import com.github.tommyettinger.textra.Styles;
 import com.github.tommyettinger.textra.TextraButton;
 import com.github.tommyettinger.textra.TextraLabel;
 import forge.Forge;
@@ -838,7 +839,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
         overlayLabel.setWidth(this.getWidth());
         overlayLabel.setWrap(true);
         overlayLabel.setAlignment(alignment);
-        overlayLabel.style = (Controls.getSkin().get(labelStyle, Label.LabelStyle.class));
+        overlayLabel.style = new Styles.LabelStyle(Controls.getSkin().get(labelStyle, Label.LabelStyle.class));
         //compute layout
         overlayLabel.layout();
         //get the layout values and apply
@@ -991,7 +992,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
             x = cImage.getX() + inset;
             y = cImage.getPrefHeight() / 2.3f;
             ARP = Forge.isLandscapeMode() ? 100 : 150;
-            cLabel = new TextraLabel("[%" + ARP + "]" + description, Controls.getSkin(), Controls.getTextraFont());
+            cLabel = new TextraLabel("[%" + ARP + "]" + description, new Styles.LabelStyle(Controls.getSkin().get(Label.LabelStyle.class)), Controls.getTextraFont());
             cLabel.setAlignment(align);
             cLabel.setWrap(true);
             cLabel.setWidth(width);

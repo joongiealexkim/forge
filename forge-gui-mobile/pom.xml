@@ -53,7 +53,7 @@
         <dependency>
             <groupId>com.github.tommyettinger</groupId>
             <artifactId>textratypist</artifactId>
-            <version>0.8.2</version>
+            <version>d4cff30fd5</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.badlogicgames.gdx</groupId>
