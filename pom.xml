@@ -200,6 +200,7 @@
                     <version>3.0.1</version>
                     <configuration>
                         <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                        <useReleaseProfile>true</useReleaseProfile>
                         <checkModificationExcludes>
                             <checkModificationExclude>.mvn/local-settings.xml</checkModificationExclude>
                             <checkModificationExclude>forge-gui/release-files/CHANGES.txt</checkModificationExclude>
@@ -346,13 +347,6 @@
                         <phase>process-resources</phase>
                         <goals>
                             <goal>flatten</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>flatten.clean</id>
-                        <phase>clean</phase>
-                        <goals>
-                            <goal>clean</goal>
                         </goals>
                     </execution>
                 </executions>
