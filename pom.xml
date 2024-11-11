@@ -30,7 +30,7 @@
         <!-- set snapshotName to blank for release -->
         <snapshotName>-SNAPSHOT</snapshotName>
         <!-- revision will be the global version string -->
-        <revision>${versionCode}${snapshotName}</revision>
+        <revision>2.0.00-SNAPSHOT</revision>
     </properties>
 
     <licenses>
@@ -200,9 +200,10 @@
                     <version>3.0.1</version>
                     <configuration>
                         <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
-			<checkModificationExcludes>
-			<checkModificationExclude>.mvn/local-settings.xml</checkModificationExclude>
-			</checkModificationExcludes>
+                        <checkModificationExcludes>
+                            <checkModificationExclude>.mvn/local-settings.xml</checkModificationExclude>
+                            <checkModificationExclude>forge-gui/release-files/CHANGES.txt</checkModificationExclude>
+                        </checkModificationExcludes>
                     </configuration>
                 </plugin>
 
